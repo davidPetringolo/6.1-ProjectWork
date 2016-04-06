@@ -1,7 +1,6 @@
 
 angular.module('routerApp')
     .controller('homeController', function($scope, $state, $http){
-<<<<<<< HEAD
         $scope.message = 'Ti trovi in home page';
 
         $http({
@@ -25,7 +24,6 @@ angular.module('routerApp')
         };
 
         $scope.list = data().getAll();
-=======
         $http({
             method: 'POST',
             url: 'http://incaneva.it/wp-admin/admin-ajax.php',
@@ -39,6 +37,3 @@ angular.module('routerApp')
         }, function errorCallback(response) {
             console.log("ERRORE");
         });
->>>>>>> 2ae7e2bc2576a7c66657f07a9b0b714f9faba385
-
-    });
