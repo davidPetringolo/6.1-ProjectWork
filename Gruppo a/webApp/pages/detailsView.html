@@ -1,3 +1,35 @@
 <h1>Dettaglio</h1>
 
-{{id}} - {{name}}
+<div>
+    <button class="btn" ng-click="viewEvents()">Load events</button>
+    <br />
+</div>
+
+<div>
+	<table>
+	    <tr>
+	        <th>BLOGNAME</th>
+	        <th>BLOGNAME_SLUG</th>
+	        <th>POST_EXCERPT</th>
+	        <th>EVCAL_SROW</th>
+	        <th>EVACL_EROW</th>
+	    </tr>
+	    <tr ng-repeat="e in events">
+	        <td>
+	            {{e.blogname}}
+	        </td>
+	        <td>
+	            {{e.blogname_slug}}
+	        </td>
+	        <td>
+	            {{e.post_excerpt}}
+	        </td>
+	        <td>
+	            {{e.evcal_srow}}
+	        </td>
+	        <td>
+	            {{e.evcal_erow}}
+	        </td>
+	    </tr>
+	</table>
+</div>

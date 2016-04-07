@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>InCaneva API</title>
 
-    <script type="text/javascript"
-            src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript"
-            src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <link rel="stylesheet" href="styles/style.css"/>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script type="text/javascript"
-            src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
 
-    <script type="text/javascript"
-            src="pages/homeController.js"></script>
-    <script type="text/javascript"
-            src="pages/detailsController.js"></script>
-</head>
-<body ng-app="routerApp">
+        <script type="text/javascript" src="pages/homeController.js"></script>
+        <script type="text/javascript" src="pages/detailsController.js"></script>
+    </head>
+    <body ng-app="inCanevaAPI">
 
-    <ul>
-        <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="contact">Contatti</a></li>
-    </ul>
+        <ul>
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="details">Details</a></li>
+        </ul>
 
-    <div ui-view></div>
+        <div ui-view></div>
 
 
-</body>
+    </body>
 </html>
