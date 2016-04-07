@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCTRL">
+
+    <div class="container">
+
+        <h1>inCANEVA</h1>
+        <br>
+        <br>
+
+        <div ng-repeat="ev in eventi">
+
+            <div class="col-md-4">
+
+                <div class="card">
+                    <img class="card-img-top" src={{ev.post_thumbnail}} alt="Card image cap" height=180px width=300px>
+                    <div class="card-block">
+                        <h4 class="card-title">{{ev.post_title | limitTo:30}}..</h4>
+                        <a href={{ev.permalink}} class="btn btn-primary">info</a>
+                    </div>
+                </div>
+
+                <br>
+
+            </div>
+
+            <!-- <div ng-repeat="(key, value) in ev track by $index">
+
+                <div ng-hide="(value == '' || key == 'post_thumbnail')" class="row">
+
+                    <b>{{key}}:</b> {{value}}
+                    <hr>
+
+                </div>
+
+                <div ng-if="key == 'post_thumbnail'">
+
+                    <img src={{value}}>
+                    <hr>
+
+                </div>
+
+            </div> -->
+
+        </div>
+
+    </div>
+
+</body>
+</html>
