@@ -8,7 +8,26 @@
 <div class="row">
     <div class="col-md-12">
         <div ng-repeat="data in myData">
-            {{data}}
+
+            <div ng-repeat="(key, value) in data track by $index">
+
+                <div ng-hide="(value == '' || key == 'post_thumbnail')" class="row">
+
+                    <b>{{key}}:</b> {{value}}
+                    <hr>
+
+                </div>
+
+                <div ng-if="key == 'post_thumbnail'">
+
+                    <img src={{value}}>
+                    <hr>
+
+                </div>
+
+            </div>
+
         </div>
+
     </div>
 </div>

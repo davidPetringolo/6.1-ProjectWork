@@ -11,7 +11,7 @@ var home = angular.module('inCaneva');
     });
     */
 
-    home.controller('homeController', function($scope, $state, $http){
+    home.controller('homeController', function($scope, $state, $http, $httpParamSerializerJQLike){
 
         $scope.visualizza = function(){
 
@@ -19,19 +19,21 @@ var home = angular.module('inCaneva');
                 method  : 'POST',
                 url     : 'http://incaneva.it/wp-admin/admin-ajax.php',
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' },
-                data    : $.param({
+                data    : $httpParamSerializerJQLike({ //$.param
                     action: 'incaneva_events',
                     blog: '1,6,7,8',
                     old: false,
-                    limit: 1
+                    //limit: 1
                 }),
             }).then(function (response){
                 $scope.myData = response.data.data;
                 $scope.success = response.data.success;
-            }, function(){
+            }, function(response){
                 alert("Nope");
             })
+
         };
+        
     });
 
 })();
