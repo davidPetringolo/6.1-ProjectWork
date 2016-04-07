@@ -12,11 +12,10 @@ angular.module('inCanevaAPI')
                     old: false,
                     limit: 10
                 })
-            }).then(function(resp){
+            }).then(function (resp) {
                 $scope.events = resp.data.data;
-            }, function(resp){
+            }, function (resp) {
                 alert("ERROR!");
-            });
+            })
 
         }})
-

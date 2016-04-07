@@ -1,18 +1,25 @@
 <h1>Dettaglio</h1>
 
 <div>
-    <button class="btn" ng-click="viewEvents()">Load events</button>
     <br />
-</div>
+    <br />
 
-<div>
-	<table>
+    <h3>Parametri d'esempio</h3>
+    <div>
+        <button class="btn" ng-click="viewEvents()">Load events</button>
+    </div>
+
+    <br />
+    <br />
+
+    <table>
 	    <tr>
-	        <th>BLOGNAME</th>
-	        <th>BLOGNAME_SLUG</th>
-	        <th>POST_EXCERPT</th>
-	        <th>EVCAL_SROW</th>
-	        <th>EVACL_EROW</th>
+	        <th>BLOGNAME (Nome dell'evento)</th>
+	        <th>BLOGNAME_SLUG (Luogo dell'evento)</th>
+	        <th>POST_EXCERPT (Descrizione)</th>
+	        <th>EVCAL_START_DATE (Data d'inizio)</th>
+	        <th>EVACL_START_TIME_HOUR (Ore:)</th>
+	        <th>EVACL_START_TIME_MIN (Minuti:)</th>
 	    </tr>
 	    <tr ng-repeat="e in events">
 	        <td>
@@ -25,10 +32,13 @@
 	            {{e.post_excerpt}}
 	        </td>
 	        <td>
-	            {{e.evcal_srow}}
+	            {{e.evcal_start_date}}
 	        </td>
 	        <td>
-	            {{e.evcal_erow}}
+	            {{e.evcal_start_time_hour}}
+	        </td>
+	        <td>
+	            {{e.evcal_start_time_min}}
 	        </td>
 	    </tr>
 	</table>
