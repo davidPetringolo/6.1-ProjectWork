@@ -1,7 +1,7 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var inCanevaAPI = angular.module('inCanevaAPI', ['ui.router']);
 
 
-routerApp.config(function($stateProvider, $urlRouterProvider) {
+inCanevaAPI.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider

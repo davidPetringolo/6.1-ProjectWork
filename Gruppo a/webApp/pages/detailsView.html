@@ -1,3 +1,45 @@
 <h1>Dettaglio</h1>
 
-{{id}} - {{name}}
+<div>
+    <br />
+    <br />
+
+    <h3>Parametri d'esempio</h3>
+    <div>
+        <button class="btn" ng-click="viewEvents()">Load events</button>
+    </div>
+
+    <br />
+    <br />
+
+    <table>
+	    <tr>
+	        <th>BLOGNAME (Nome dell'evento)</th>
+	        <th>BLOGNAME_SLUG (Luogo dell'evento)</th>
+	        <th>POST_EXCERPT (Descrizione)</th>
+	        <th>EVCAL_START_DATE (Data d'inizio)</th>
+	        <th>EVACL_START_TIME_HOUR (Ore:)</th>
+	        <th>EVACL_START_TIME_MIN (Minuti:)</th>
+	    </tr>
+	    <tr ng-repeat="e in events">
+	        <td>
+	            {{e.blogname}}
+	        </td>
+	        <td>
+	            {{e.blogname_slug}}
+	        </td>
+	        <td>
+	            {{e.post_excerpt}}
+	        </td>
+	        <td>
+	            {{e.evcal_start_date}}
+	        </td>
+	        <td>
+	            {{e.evcal_start_time_hour}}
+	        </td>
+	        <td>
+	            {{e.evcal_start_time_min}}
+	        </td>
+	    </tr>
+	</table>
+</div>
