@@ -2,7 +2,7 @@
  * Created by TheDirektor on 07/04/16.
  */
 
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ui.bootstrap']);
 
 myApp.controller('myCTRL', ['$scope', function($scope) {
 
@@ -13,7 +13,7 @@ myApp.controller('myCTRL', ['$scope', function($scope) {
     $.post("http://incaneva.it/wp-admin/admin-ajax.php",
         {
             action: 'incaneva_events',
-            blog: '1,6,7,8', limit: 25, old: true
+            blog: '1,6,7,8', limit: 10, old: false
         },
         function(result){
             eventi = result;
@@ -22,5 +22,9 @@ myApp.controller('myCTRL', ['$scope', function($scope) {
         'json');
 
     $scope.eventi = eventi;
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 
 }]);
