@@ -9,6 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.js"></script>
     <script src="app.js"></script>
 
 </head>
@@ -27,7 +28,7 @@
             <div class="col-md-4">
 
                     <div class="card">
-                        <img class="card-img-top" src={{ev.post_thumbnail}} alt="Card image cap" width=318px height=180px>
+                        <img class="card-img-top" src={{ev.post_thumbnail}} alt="Card image cap" width=318px height=180px data-toggle="modal" data-target="#{{ev.ID}}">
                         <div class="card-block">
                             <h4 data-toggle="tooltip" data-placement="top" title="{{ev.post_title}}">
                                 {{ev.post_title | limitTo:30}}..
@@ -36,9 +37,9 @@
                             <h5>{{ev.formattedDate}}</h5>
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ev.ID}}">
+                            <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ev.ID}}">
                                 info
-                            </button>
+                            </button> -->
 
 
                             <!-- Modal -->
@@ -55,7 +56,8 @@
 
                                                 <img src={{ev.post_thumbnail}} width="318" height="180">
                                                 <h2 class="title">{{ev.post_title}}</h2>
-                                                <h3>{{ev.formattedDate}}</h3>
+                                                <h4>{{ev.formattedDate}}</h4>
+                                                <div ng-bind-html=ev.post_content></div>
 
                                                 <!--<div ng-repeat="(key, value) in ev track by $index">
 

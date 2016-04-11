@@ -2,7 +2,7 @@
  * Created by TheDirektor on 07/04/16.
  */
 
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ngSanitize']);
 
 myApp.controller('myCTRL', ['$scope', function($scope) {
 
@@ -23,10 +23,10 @@ myApp.controller('myCTRL', ['$scope', function($scope) {
     $scope.eventi = eventi;
     
     $scope.eventi.forEach(function (x){
-        if(eventi.evcal_end_date){
+        if(x.evcal_end_date == ""){
             x.formattedDate = x.evcal_start_date;
         }else{
-            x.formattedDate = "Dal " + x.evcal_start_date + " al " + x.evcal_end_date;
+            x.formattedDate = x.evcal_start_date + " - " + x.evcal_end_date;
         }
     });   
 
