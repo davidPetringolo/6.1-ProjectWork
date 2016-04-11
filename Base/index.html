@@ -58,7 +58,7 @@
                                                 <h2 class="title">{{ev.post_title}}</h2>
                                                 <h4>{{ev.formattedDate}}</h4>
                                                 <div ng-bind-html=ev.post_content></div>
-
+                                                
                                                 <!--<div ng-repeat="(key, value) in ev track by $index">
 
                                                     
@@ -80,8 +80,28 @@
 
                                             </div>
 
-                                        </div>
+                                        </div>                                    
                                         <div class="modal-footer">
+                                            <div style="float: left">
+                                                    <ul class="share-buttons">
+                                                      <a href="https://www.facebook.com/sharer/sharer.php?u={{ev.permalink}}" title="Share on Facebook" target="_blank">
+                                                      <img src="imgs/colors/Facebook.png">
+                                                      </a>
+
+                                                      <a href="https://twitter.com/intent/tweet?source={{ev.permalink}}" target="_blank" title="Tweet">
+                                                      <img src="imgs/colors/Twitter.png">
+                                                      </a>
+
+                                                      <a href="https://plus.google.com/share?url={{ev.permalink}}" target="_blank" title="Share on Google+">
+                                                      <img src="imgs/colors/Google+.png">
+                                                      </a>
+
+                                                      <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ev.permalink}}" target="_blank" title="Share on LinkedIn"><img src="imgs/colors/LinkedIn.png"></a>
+                                                      
+                                                      <a href="mailto:?subject=Follow%20us%20on%20our%20official%20site&body={{ev.permalink}}" target="_blank" title="Email"><img src="imgs/colors/Email.png"></a>
+                                                    </ul>
+                                                </div>
+
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
