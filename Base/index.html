@@ -33,7 +33,7 @@
                                 {{ev.post_title | limitTo:30}}..
                             </h4>
 
-                            <h5>{{ev.evcal_start_date}}</h5>
+                            <h5>{{ev.formattedDate}}</h5>
 
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ev.ID}}">
@@ -55,6 +55,7 @@
 
                                                 <img src={{ev.post_thumbnail}} width="318" height="180">
                                                 <h2 class="title">{{ev.post_title}}</h2>
+                                                <h3>{{ev.formattedDate}}</h3>
 
                                                 <!--<div ng-repeat="(key, value) in ev track by $index">
 

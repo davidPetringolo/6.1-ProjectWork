@@ -2,7 +2,7 @@
  * Created by TheDirektor on 07/04/16.
  */
 
-var myApp = angular.module('myApp',['ui.bootstrap']);
+var myApp = angular.module('myApp',[]);
 
 myApp.controller('myCTRL', ['$scope', function($scope) {
 
@@ -16,12 +16,19 @@ myApp.controller('myCTRL', ['$scope', function($scope) {
             blog: '1,6,7,8', limit: 10, old: false
         },
         function(result){
-            eventi = result;
-            eventi = eventi.data;
+            eventi = result.data;
         },
         'json');
 
     $scope.eventi = eventi;
+    
+    $scope.eventi.forEach(function (x){
+        if(eventi.evcal_end_date){
+            x.formattedDate = x.evcal_start_date;
+        }else{
+            x.formattedDate = "Dal " + x.evcal_start_date + " al " + x.evcal_end_date;
+        }
+    });   
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
