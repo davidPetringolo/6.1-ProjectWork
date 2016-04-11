@@ -36,7 +36,7 @@
                             <h5>{{ev.evcal_start_date}}</h5>
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#{{ev.ID}}">
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#{{ev.ID}}">
                                 info
                             </button>
 
@@ -47,14 +47,18 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">{{ev.post_title}}</h4>
+                                            <h4 class="modal-title" id="myModalLabel">{{ev.blogname}}</h4>
                                         </div>
                                         <div class="modal-body row">
 
                                             <div class="col-md-offset-2 col-md-8">
 
-                                                <div ng-repeat="(key, value) in ev track by $index">
+                                                <img src={{ev.post_thumbnail}} width="318" height="180">
+                                                <h2 class="title">{{ev.post_title}}</h2>
 
+                                                <!--<div ng-repeat="(key, value) in ev track by $index">
+
+                                                    
                                                     <div ng-hide="(value == '' || key == 'post_thumbnail')" class="row">
 
                                                         <b>{{key}}:</b> {{value}}
@@ -69,7 +73,7 @@
 
                                                     </div>
 
-                                                </div>
+                                                </div>-->
 
                                             </div>
 
