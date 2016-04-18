@@ -1,0 +1,13 @@
+<ion-view title="Login" id="page1" style="background-color:#FFFFFF;">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input" name="email">
+                <input ng-model="mail" type="email" placeholder="inserisci l email">
+            </label>
+            <label class="item item-input" name="pwd">
+                <input ng-model="pwd" type="password" placeholder="inserisci la password">
+            </label>
+            <a ng-click="send(mail, pwd)" id="login-button5" class="button button-positive  button-block icon ion-log-in"></a>
+        </form>
+    </ion-content>
+</ion-view>
