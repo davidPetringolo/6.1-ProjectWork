@@ -5,8 +5,8 @@ storeLocator.controller('listController', function($scope, storeManager) {
 		}
 		else {
 			$scope.currentStores = storeRes;
-			//console.log(currentStores);
-		}
+			console.log(currentStores);
+			}
 	})
 });
 

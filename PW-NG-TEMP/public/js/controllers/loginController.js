@@ -5,7 +5,7 @@ storeLocator.controller('loginController', function($scope, loginManager, storeM
         	} else {
         		var currentSession = result.session;
         		console.log(currentSession);
-        		storeManager.getAll(currentSession, function(storeErr, storeRes){
+        		/*storeManager.getAll(currentSession, function(storeErr, storeRes){
         			if(storeErr){
         				console.log("no store loaded");
         			} else {
@@ -19,7 +19,7 @@ storeLocator.controller('loginController', function($scope, loginManager, storeM
         					}
         				})
         			}
-        		})
+        		})*/
         	}
         })
     });
