@@ -5,7 +5,7 @@ storeLocator.controller('detailsController', function($scope, storeDetailsManage
         else {
             console.log("Valid session. Retriving details info."); //starts a buffering circle
             //when info are ready puts JSON into a list (see below)
-            $scope.storeDetails = openStore.getByID(guid);
+            $scope.storeDetails = openStore.getStoreByID(guid);
         }
     }
 });
