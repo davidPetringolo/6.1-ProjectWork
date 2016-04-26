@@ -30,7 +30,7 @@ body {
 }
 
 .jumbotron {
-    margin-top: 25px;
+    margin-top: 82px;
     font-size: 21px;
 
     -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
@@ -67,8 +67,17 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
+.navbar-fixed-top {
+    background-color: black;
+    align-items: center;
+}
+.logoutFix {
+    cursor: hand;
+}
+#map {
+    width: 300px;
+    height: 300px;
+}
 
 
 
@@ -137,20 +146,20 @@ body {
     color: white;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-primary,
- .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-primary,
- .btn-group-raised .btn:not(.btn-link):hover.btn-primary,
- .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-primary,
- .btn.btn-raised:not(.btn-link):focus.btn-primary,
- .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-primary,
- .btn-group-raised .btn:not(.btn-link):focus.btn-primary,
- .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-primary,
- .btn.btn-raised:not(.btn-link).active.btn-primary,
- .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-primary,
- .btn-group-raised .btn:not(.btn-link).active.btn-primary,
- .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-primary,
- .btn.btn-raised:not(.btn-link):active.btn-primary,
- .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
- .btn-group-raised .btn:not(.btn-link):active.btn-primary,
- .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
-     background-color: grey;
- }
+.input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-primary,
+.btn-group-raised .btn:not(.btn-link):hover.btn-primary,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-primary,
+.btn.btn-raised:not(.btn-link):focus.btn-primary,
+.input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-primary,
+.btn-group-raised .btn:not(.btn-link):focus.btn-primary,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-primary,
+.btn.btn-raised:not(.btn-link).active.btn-primary,
+.input-group-btn .btn.btn-raised:not(.btn-link).active.btn-primary,
+.btn-group-raised .btn:not(.btn-link).active.btn-primary,
+.btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-primary,
+.btn.btn-raised:not(.btn-link):active.btn-primary,
+.input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
+.btn-group-raised .btn:not(.btn-link):active.btn-primary,
+.btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
+    background-color: grey;
+}

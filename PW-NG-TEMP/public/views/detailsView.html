@@ -1,11 +1,21 @@
+<div class="navbar navbar-fixed-top ng-scope">
+    <div class="row">
+        <div class="col-md-4">
+            <a ui-sref="list" class="navleft" href="#/list">&lt; List</a>
+        </div>
+        <div class="col-md-4">
+            <a ui-sref="list" class="logo navcenter" href="#/list"></a>
+        </div>
+        <div class="col-md-4">
+            <button class="btn navright" ng-click="logout()">LogOut</button>
+        </div>
+    </div>
+</div>
+
+
 <div class="row">
     <div class="col-md-12">
         <div class="jumbotron">
-            <div class="row">
-                <div class="col-md-12">
-                    <img class="img-responsive" src={{storeDet.featured_image}}>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
                     {{storeDet.name}}
@@ -29,6 +39,11 @@
             <div class="row">
                 <div class="col-md-12">
                     {{storeDet.phone}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                   <div id="map"></div>
                 </div>
             </div>
         </div>

@@ -12,5 +12,11 @@ storeLocator.controller('listController', function($scope, $state, $cookies, $co
 
     $scope.details =  function (guid) {
         $state.go('details', {guid:guid});
+    };
+
+    $scope.logout = function () {
+        $cookies.remove('session');
+        $state.go('login');
     }
+
 });
