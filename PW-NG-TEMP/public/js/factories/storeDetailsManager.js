@@ -17,6 +17,6 @@ storeLocator.factory("storeDetailsManager", function($http) {
 		.error(function(result) {
 				completionHandler(true);
 			})
-	}
+	};
 	return details_manager;
 });

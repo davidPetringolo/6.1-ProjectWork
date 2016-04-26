@@ -21,6 +21,6 @@ storeLocator.factory("loginManager", function($http) {
 		.error(function(result) {
 				completionHandler(true);
 			})
-	}
+	};
 	return login_manager;
 });

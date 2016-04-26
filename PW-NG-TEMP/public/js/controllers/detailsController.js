@@ -1,11 +1,17 @@
-storeLocator.controller('detailsController', function($scope, storeDetailsManager) {
-    storeDetailsManager.getByID = function('', guid, function(err,result) {
-        if (err)
-            console.error("Non valid session. Should be redirected to Login");
-        else {
-            console.log("Valid session. Retriving details info."); //starts a buffering circle
-            //when info are ready puts JSON into a list (see below)
-            $scope.storeDetails = openStore.getStoreByID(guid);
+storeLocator.controller('detailsController', function($scope, $state, $cookies, $cookieStore, $http, $stateParams, loginManager, storeDetailsManager) {
+
+    var session = $cookies.getObject('session');
+    var guid = $stateParams.guid;
+
+    storeDetailsManager.getByID(session, guid, function (detailErr, detailRes) {
+        if (detailErr) {
+            console.log("detail loading failure");
+        } else {
+            console.log(detailRes);
+            $scope.storeDet = detailRes;
         }
-    }
+    })
+
+    
+    
 });

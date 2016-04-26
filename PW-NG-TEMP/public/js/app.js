@@ -1,4 +1,4 @@
-var storeLocator = angular.module("storeLocator", ['ui.router']);
+var storeLocator = angular.module("storeLocator", ['ui.router', 'ngCookies']);
 
 storeLocator.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/login');
@@ -15,9 +15,11 @@ storeLocator.config(function($stateProvider, $urlRouterProvider) {
             controller: 'listController'
         })
         .state('details', {
-            url: '/details',
+            url: '/details/:guid',
             templateUrl: 'views/detailsView.html',
             controller: 'detailsController'
         })
     ;
 });
+
+$.material.init();

@@ -1,0 +1,156 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+
+body {
+    background-image: url("../asserts/jesse-brand.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    display: block;
+    text-indent: -9999px;
+    width: 100px;
+    height: 82px;
+    background-image: url(../asserts/logo-jesse-cerchio.svg);
+    background-size: 100px 82px;
+}
+
+.vertically-align {
+    align-items: center;
+}
+
+.login {
+    text-align: center;
+}
+
+.jumbotron {
+    margin-top: 25px;
+    font-size: 21px;
+
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-group.is-focused .form-control .material-input:after {
+    background-color: gold;
+}
+.form-group.is-focused label,
+.form-group.is-focused label.control-label {
+    color: gold;
+}
+
+.btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
+    color: gold;
+}
+
+.form-group.is-focused .form-control {
+    background-image: gold;
+}
+
+.form-group .form-control {
+    border: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(gold)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(gold, gold), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(gold, gold), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(gold, gold), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.form-group.is-focused .form-control {
+    outline: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(gold)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(gold, gold), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(gold, gold), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(gold, gold), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.form-group.is-focused .form-control .material-input:after {
+    background-color: gold;
+}
+.input-group-btn .btn:not(.btn-raised).btn-primary {
+    color: gold;
+}
+.btn.btn-raised.btn-primary,
+.input-group-btn .btn.btn-raised.btn-primary,
+.btn.btn-fab.btn-primary,
+.input-group-btn .btn.btn-fab.btn-primary,
+.btn-group-raised .btn.btn-primary,
+.btn-group-raised .input-group-btn .btn.btn-primary {
+    background-color: black;
+    color: white;
+}
+.btn.btn-raised:not(.btn-link):hover.btn-primary,
+ .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-primary,
+ .btn-group-raised .btn:not(.btn-link):hover.btn-primary,
+ .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-primary,
+ .btn.btn-raised:not(.btn-link):focus.btn-primary,
+ .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-primary,
+ .btn-group-raised .btn:not(.btn-link):focus.btn-primary,
+ .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-primary,
+ .btn.btn-raised:not(.btn-link).active.btn-primary,
+ .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-primary,
+ .btn-group-raised .btn:not(.btn-link).active.btn-primary,
+ .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-primary,
+ .btn.btn-raised:not(.btn-link):active.btn-primary,
+ .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
+ .btn-group-raised .btn:not(.btn-link):active.btn-primary,
+ .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
+     background-color: grey;
+ }
