@@ -13,6 +13,20 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                 lat: 66, //placeholder
                 lng: 66  //placedshbujdcbsidjk
             });
+            GMaps.geolocate({
+                success: function(position) {
+                    gmap.setCenter(position.coords.latitude, position.coords.longitude);
+                },
+                error: function(error) {
+                    alert('Geolocation failed: '+error.message);
+                },
+                not_supported: function() {
+                    alert("Your browser does not support geolocation");
+                },
+                always: function() {
+                    alert("Done!");
+                }
+            });
             for (var i = result.length - 1; i >= 0; i--) {
 
                     gmap.addMarker({
@@ -25,6 +39,8 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
             }
         }
     });
+
+
 
     $scope.logout = function () {
         $cookies.remove('session');
