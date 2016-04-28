@@ -7,12 +7,12 @@
 }
 
 body {
-    background-image: url("../asserts/jesse-brand.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-image: url("../asserts/sfondofigo.jpg");
+
 }
 
 .logo {
+    opacity: 1;
     display: block;
     text-indent: -9999px;
     width: 100px;
@@ -30,8 +30,8 @@ body {
 }
 
 .jumbotron {
-    margin-top: 82px;
     font-size: 21px;
+    opacity: 0.9;
 
     -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1.5s; /* Firefox < 16 */
@@ -41,44 +41,50 @@ body {
 }
 @keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to   { opacity: 0.9; }
 }
-.navbar-fixed-top {
-    background-color: black;
-    align-items: center;
+.navbar, .navbar.navbar-default {
+    background-color: #000000;
+    color: #DAA520;
+    font-style: inherit;
 }
 .logoutFix {
     cursor: hand;
 }
 #map {
-    width: 300px;
-    height: 300px;
+    width: 800px;
+    height: 800px;
 }
-
+#logghi {
+    padding-right: 50px;
+}
+.noOpacity {
+    opacity: 1;
+}
 
 
 
@@ -101,40 +107,40 @@ body {
 
 
 .form-group.is-focused .form-control .material-input:after {
-    background-color: gold;
+    background-color: #DAA520;
 }
 .form-group.is-focused label,
 .form-group.is-focused label.control-label {
-    color: gold;
+    color: #DAA520;
 }
 
 .btn:not(.btn-raised).btn-primary, .input-group-btn .btn:not(.btn-raised).btn-primary {
-    color: gold;
+    color: #DAA520;
 }
 
 .form-group.is-focused .form-control {
-    background-image: gold;
+
 }
 
 .form-group .form-control {
     border: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(gold)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
-    background-image: -webkit-linear-gradient(gold, gold), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: -o-linear-gradient(gold, gold), -o-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: linear-gradient(gold, gold), linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DAA520), to(#DAA520)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#DAA520, #DAA520), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#DAA520, #DAA520), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#DAA520, #DAA520), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.is-focused .form-control {
     outline: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(gold), to(gold)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
-    background-image: -webkit-linear-gradient(gold, gold), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: -o-linear-gradient(gold, gold), -o-linear-gradient(#D2D2D2, #D2D2D2);
-    background-image: linear-gradient(gold, gold), linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DAA520), to(#DAA520)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#DAA520, #DAA520), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#DAA520, #DAA520), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#DAA520, #DAA520), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.is-focused .form-control .material-input:after {
-    background-color: gold;
+    background-color: #DAA520;
 }
 .input-group-btn .btn:not(.btn-raised).btn-primary {
-    color: gold;
+    color: #DAA520;
 }
 .btn.btn-raised.btn-primary,
 .input-group-btn .btn.btn-raised.btn-primary,

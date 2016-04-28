@@ -6,6 +6,7 @@ storeLocator.controller('listController', function($scope, $state, $cookies, $co
         if(err){
             console.log('errore caricamento stores')
         } else {
+            console.log(result);
             $scope.list = result;
         }
     });
