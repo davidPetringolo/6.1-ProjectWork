@@ -1,4 +1,12 @@
-storeLocator.controller('loginController', function($scope, $state, $cookies, $cookieStore, loginManager){
+storeLocator.controller('loginController', function($scope, $state, $cookies, $cookieStore, loginManager, sessionController){
+
+    sessionController.check($cookies.getObject('session') ,function(err, result){
+        if(!err){
+            $state.go('list');
+        } else {
+            console.log("sessione scaduta");
+        }
+    });
 
     $scope.loginComplete = function(){
 
