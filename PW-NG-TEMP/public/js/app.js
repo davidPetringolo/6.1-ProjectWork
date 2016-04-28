@@ -1,4 +1,4 @@
-var storeLocator = angular.module("storeLocator", ['ui.router', 'ngCookies']);
+var storeLocator = angular.module("storeLocator", ['ui.router', 'ngCookies', 'ngDialog']);
 
 storeLocator.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/login');
