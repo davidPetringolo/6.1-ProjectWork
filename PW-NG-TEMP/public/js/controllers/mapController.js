@@ -24,7 +24,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     alert("Your browser does not support geolocation");
                 },
                 always: function() {
-                    alert("Done!");
+                    alert("Everything working fine...at least now.");
                 }
             });
             for (var i = result.length - 1; i >= 0; i--) {
@@ -33,14 +33,13 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     lat: result[i].latitude,
                     lng: result[i].longitude,
                     infoWindow:{
-                        content: '<p>' + result[i].name + '</p>'
+                        content: '<p><h4>' + result[i].name + '</h4>' + result[i].address + '<br>' + result[i].phone + '</p>'
                     }
+
                 })
             }
         }
     });
-
-
 
     $scope.logout = function () {
         $cookies.remove('session');

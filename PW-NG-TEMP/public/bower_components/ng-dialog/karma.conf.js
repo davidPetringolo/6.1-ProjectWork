@@ -9,7 +9,7 @@ if (testMinified) {
 
 module.exports = function(config) {
     config.set({
-        basePath: '',
+        basePath: '),
         frameworks: ['jasmine'],
         files: [
             'bower_components/angular/angular.js',

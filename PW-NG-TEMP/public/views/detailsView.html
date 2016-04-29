@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a ui-sref="list" class="navbar-brand logo" href="#"></a>
+            <a ui-sref="list" class="navbar-brand brand" href="#">JESSE</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,41 +27,62 @@
 <div class="row">
     <div class="col-md-12">
         <div class="jumbotron">
-
-
-
             <div class="row">
-                <div class="col-md-12">
-                    {{storeDet.name}}
+                <div class="col-md-10">
+                    <h1>{{storeDet.name}}</h1>
+                </div>
+                <div class="col-md-2">
+                    <img class="img-responsive stato" ng-src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/512/shop-closed-icon.png" ng-show="isinactive"/>
+                    <img class="img-responsive stato" ng-src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-11/512/shop-open-icon.png" ng-show="isactive"/>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    {{storeDet.address}}
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Sales Manager:</h3>
+                    {{storeDet.sales_person.first}}
+                    {{storeDet.sales_person.last}}<br>
+                    <a href="mailto:{{storeDet.sales_person.email}}">{{storeDet.sales_person.email}}</a>
+                    <h3>Contatti e Indirizzo:</h3>
+                    {{storeDet.address}}<br>
+                    <a href="tel:{{storeDet.phone}}">{{storeDet.phone}}</a>
+                </div>
+                <div class="col-md-6">
+                    <h3>Descrizione:</h3>
                     {{storeDet.description}}
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    {{storeDet.open_date}}
+
                 </div>
             </div>
-            <div class="row">
+            <div class="row noOpacity">
                 <div class="col-md-12">
-                    <a href="tel:{{storeDet.phone}}">
-                        {{storeDet.phone}}
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
+                    <h3>Mappa:</h3>
                    <div id="map" class="img-responsive"></div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <footer class="footer">
+                <p class="text-muted">The most awesome footer.
+                    Maybe some infos were needed ;)</p>
+            </footer>
         </div>
     </div>
 </div>

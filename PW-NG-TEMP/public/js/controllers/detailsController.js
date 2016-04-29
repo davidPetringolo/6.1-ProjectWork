@@ -4,12 +4,20 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
     var guid = $stateParams.guid;
     var gmap;
 
+    $scope.isactive = false;
+    $scope.isinactive = false;
+    
     storeDetailsManager.getByID(session, guid, function (detailErr, detailRes) {
         if (detailErr) {
             console.log("detail loading failure");
         } else {
             console.log(detailRes);
             $scope.storeDet = detailRes;
+            if (detailRes.isActive == false) {
+                $scope.isinactive = true;
+            } else {
+                $scope.isactive = true;
+            }
             gmap = new GMaps({
                 el: '#map',
                 lat: detailRes.latitude,

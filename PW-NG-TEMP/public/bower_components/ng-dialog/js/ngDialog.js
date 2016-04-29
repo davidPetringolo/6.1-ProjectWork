@@ -15,7 +15,7 @@
         module.exports = 'ngDialog';
     } else if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['angular'], factory);
+        define(['../../angular/angular'], factory);
     } else {
         // Global Variables
         factory(root.angular);

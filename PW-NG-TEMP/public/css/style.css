@@ -1,24 +1,42 @@
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: black;
-}
-
 body {
     background-image: url("../asserts/sfondofigo.jpg");
 
+}
+
+.storespinner {
+    text-align: center;
+}
+.storelist {
+    background-color: #FFFEEF;
+
+}
+hr {
+    background-color: #DAA520;
+    border-top: 1px solid #DAA520;
+}
+
+a, a:hover, a:focus {
+    color: #DAA520;
+}
+
+.stato {
+    height: 70%;
+    width: 70%;
 }
 
 .logo {
     opacity: 1;
     display: block;
     text-indent: -9999px;
-    width: 100px;
-    height: 82px;
+    width: 102px;
+    height: 102px;
     background-image: url(../asserts/logo-jesse-cerchio.svg);
-    background-size: 100px 82px;
+    background-size: 102px 102px;
+}
+.brand {
+    color: #FFFEEF !important;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .vertically-align {
@@ -31,7 +49,7 @@ body {
 
 .jumbotron {
     font-size: 21px;
-    opacity: 0.9;
+    opacity: 0.95;
 
     -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1.5s; /* Firefox < 16 */
@@ -41,31 +59,31 @@ body {
 }
 @keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 0.9; }
+    to   { opacity: 0.95; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 0.9; }
+    to   { opacity: 0.95; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 0.9; }
+    to   { opacity: 0.95; }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 0.9; }
+    to   { opacity: 0.95; }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
     from { opacity: 0; }
-    to   { opacity: 0.9; }
+    to   { opacity: 0.95; }
 }
 .navbar, .navbar.navbar-default {
     background-color: #000000;
@@ -75,24 +93,59 @@ body {
 .logoutFix {
     cursor: hand;
 }
+.info {
+    cursor: pointer;
+}
 #map {
-    width: 800px;
+    width: 100%;
     height: 800px;
 }
 #logghi {
     padding-right: 50px;
 }
 .noOpacity {
-    opacity: 1;
+    opacity: 1 !important;
+}
+.fakeicon {
+    width: 100%;
+    height: 100%;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+    background: rgba(182, 0, 0, 1);
+    color: #fff;
 }
 
-
-
-
-
-
-
-
+.ngdialog.ngdialog-theme-default .ngdialog-close:before {
+    color: #fff;
+}
+h3 {
+    font-weight: bold;
+}
+li {
+    font-weight: bold;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: black;
+    margin-top: 7px;
+    margin-bottom: -60px;
+    margin-left: -15px;
+    margin-right: 21px;
+    padding-left: 40%;
+    padding-right: 40%;
+}
 
 
 
@@ -168,13 +221,4 @@ body {
 .btn-group-raised .btn:not(.btn-link):active.btn-primary,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary {
     background-color: grey;
-}
-
-.ngdialog.ngdialog-theme-default .ngdialog-content {
-  background: #ff0000;
-  color: #fff;
-}
-
-.ngdialog.ngdialog-theme-default .ngdialog-close:before {
-  color: #fff;
 }

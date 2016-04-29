@@ -1,10 +1,13 @@
 storeLocator.controller('loginController', function($scope, $state, $cookies, $cookieStore, loginManager, sessionController, ngDialog){
 
+    $scope.loginshow = false;
+
     sessionController.check($cookies.getObject('session') ,function(err, result){
         if(!err){
             $state.go('list');
         } else {
             console.log("sessione scaduta");
+            $scope.loginshow = true;
         }
     });
 
@@ -27,7 +30,7 @@ storeLocator.controller('loginController', function($scope, $state, $cookies, $c
             if(error){
                 ngDialog.open({ template: 'Il nome utente o la password potrebbero essere errati. Prova a reinserirli o contatta la nostra assistenza', plain:true});
             }else{
-            //register
+                //register
             }
         })
 
