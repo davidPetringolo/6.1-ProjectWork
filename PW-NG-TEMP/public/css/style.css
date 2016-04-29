@@ -1,6 +1,10 @@
 body {
-    background-image: url("../asserts/sfondofigo.jpg");
+    background-image: url("../asserts/sfondorepeat.jpg");
+}
 
+.fa {
+    font-size: 150px;
+    font-size: 10vw;
 }
 
 .storespinner {
@@ -17,11 +21,6 @@ hr {
 
 a, a:hover, a:focus {
     color: #DAA520;
-}
-
-.stato {
-    height: 70%;
-    width: 70%;
 }
 
 .logo {

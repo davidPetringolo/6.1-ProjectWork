@@ -12,7 +12,7 @@ storeLocator.controller('loginController', function($scope, $state, $cookies, $c
     });
 
     $scope.loginComplete = function(){
-
+        
         var error = false;
 
         loginManager.login($scope.email, $scope.password, function(err, result){
@@ -28,7 +28,7 @@ storeLocator.controller('loginController', function($scope, $state, $cookies, $c
                 }
             }
             if(error){
-                ngDialog.open({ template: 'Il nome utente o la password potrebbero essere errati. Prova a reinserirli o contatta la nostra assistenza', plain:true});
+                ngDialog.open({ template: 'Il nome utente o la password potrebbero essere errati. <br> Prova a reinserirli o contatta la nostra assistenza', plain:true});
             }else{
                 //register
             }

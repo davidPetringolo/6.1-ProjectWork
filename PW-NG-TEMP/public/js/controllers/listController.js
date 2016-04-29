@@ -1,7 +1,16 @@
-storeLocator.controller('listController', function($scope, $state, $cookies, $cookieStore, $http, $stateParams, loginManager, storeDetailsManager, storeManager){
+storeLocator.controller('listController', function($scope, $state, $cookies, $cookieStore, $http, $stateParams, loginManager, storeDetailsManager, storeManager, sessionController){
 
     var session = $cookies.getObject('session');
 
+    sessionController.check($cookies.getObject('session') ,function(err, result){
+        if(!err){
+            $state.go('list');
+        } else {
+            console.log("sessione scaduta");
+            $state.go('login');
+        }
+    });
+    
     $scope.loading = true;
 
     storeManager.getAll(session, function(err, result){

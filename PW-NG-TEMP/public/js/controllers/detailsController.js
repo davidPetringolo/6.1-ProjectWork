@@ -1,6 +1,16 @@
-storeLocator.controller('detailsController', function($scope, $state, $cookies, $cookieStore, $http, $stateParams, loginManager, storeDetailsManager) {
+storeLocator.controller('detailsController', function($scope, $state, $cookies, $cookieStore, $http, $stateParams, loginManager, storeDetailsManager, sessionController) {
 
     var session = $cookies.getObject('session');
+
+    sessionController.check($cookies.getObject('session') ,function(err, result){
+        if(!err){
+            $state.go('details');
+        } else {
+            console.log("sessione scaduta");
+            $state.go('login');
+        }
+    });
+    
     var guid = $stateParams.guid;
     var gmap;
 
@@ -38,5 +48,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
         $cookies.remove('session');
         $state.go('login');
     }
-    
+
+
+
 });
