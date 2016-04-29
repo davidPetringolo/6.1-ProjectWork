@@ -31,7 +31,8 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="form-group login">
-                        <button type="submit" class="btn btn-raised btn-primary noOpacity" ng-click="loginComplete()">Submit</button>
+                            <img ng-src="http://v2.preloaders.net/preloaders/2/Broken%20circle.gif" ng-show="loginwait"/>
+                            <button type="submit" class="btn btn-raised btn-primary noOpacity" ng-click="loginComplete()" ng-show="submithide">Submit</button>
                         </div>
                     </div>
                 </div>

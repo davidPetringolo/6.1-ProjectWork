@@ -34,7 +34,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     alert("Your browser does not support geolocation");
                 },
                 always: function() {
-                    alert("Everything working fine...at least now.");
+                    //alert("Everything working fine...at least now.");
                 }
             });
             for (var i = result.length - 1; i >= 0; i--) {

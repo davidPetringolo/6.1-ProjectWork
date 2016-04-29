@@ -37,7 +37,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
                 lat: detailRes.latitude,
                 lng: detailRes.longitude,
                 infoWindow:{
-                    content: '<p><h4>' + result[i].name + '</h4>' + result[i].address + '<br>' + result[i].phone + '</p>'
+                    content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
                 }
             })
 
