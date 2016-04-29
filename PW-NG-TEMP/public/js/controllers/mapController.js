@@ -20,8 +20,8 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
             list = result;
             gmap = new GMaps({
                 el: '#map',
-                lat: 66, //placeholder
-                lng: 66  //placedshbujdcbsidjk
+                lat: 45.913201, //placeholder
+                lng: 12.5070156  //placedshbujdcbsidjk
             });
             GMaps.geolocate({
                 success: function(position) {
