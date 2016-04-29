@@ -51,6 +51,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     gmap.addMarker({
                     lat: result[i].latitude,
                     lng: result[i].longitude,
+                    icon: storePin,
                     infoWindow:{
                         content: '<p><h4><a ui-sref = details('+ result[i].guid +')>' + result[i].name + '</a></h4>' + result[i].address + '<br />' + '<a href =callto:"' + result[i].phone + '">' + result[i].phone + '</a></p>'
                     }
