@@ -1,27 +1,85 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ui-sref="list" class="navbar-brand brand" href="#">JESSE</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="list" href="#">TUTTI GLI STORES</a></li>
+                <li><a ui-sref="map" href="#">VICINO A TE</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="logghi" ng-click="logout()" href="#">LOGOUT</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
 <div class="row">
     <div class="col-md-12">
         <div class="jumbotron">
 
-            <div ng-repeat="n in list">
+            <div class="row">
+                <div class="col-md-12 storespinner">
+                    <img ng-src="https://d13yacurqjgara.cloudfront.net/users/12755/screenshots/1037374/hex-loader2.gif" ng-show="loading"/>
+                </div>
+            </div>
 
 
-                <div class="list-group">
-                    <div class="list-group-item">
-                        <!--<div class="row-picture">
-                            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-                        </div>-->
-                        <div class="row-content">
-                            <h4 class="list-group-item-heading">{{n.name}}</h4>
-                            <p class="list-group-item-text">{{n.phone}}</p>
-                            <button class="btn btn-default" ng-click="details(n.guid)">Dettaglio</button>
+            <div class="storelist" ng-repeat="n in list">
+
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="fakeicon" src="http://simpleicon.com/wp-content/uploads/shop-4-256x256.png"/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>{{n.name}}</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{n.address}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="tel:{{n.phone}}">{{n.phone}}</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="list-group-separator"></div>
+                    <div class="col-md-2">
+                        <div class="info" ng-click="details(n.guid)"><img class="img-responsive" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1024px-Infobox_info_icon.svg.png"/></div>
+                    </div>
                 </div>
+                <hr>
+
 
             </div>
 
 
         </div>
     </div>
+</div>
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <footer class="footer">
+                    <p class="text-muted">The most awesome footer.
+                        Maybe some infos were needed ;)</p>
+                </footer>
+            </div>
+        </div>
 </div>

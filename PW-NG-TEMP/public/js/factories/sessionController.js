@@ -2,7 +2,7 @@ storeLocator.factory("sessionController", function($http) {
 
 	var session_controller = {};
 
-	session_controller.getAll = function(session, completionHandler) {
+	session_controller.check = function(session, completionHandler) {
 
 		$http.get("http://its-bitrace.herokuapp.com/api/v2/stores", {
 			headers:{'x-bitrace-session': session}
