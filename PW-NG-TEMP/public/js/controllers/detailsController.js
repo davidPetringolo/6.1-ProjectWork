@@ -30,7 +30,5 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
         $cookies.remove('session');
         $state.go('login');
     }
-
-
-
+    
 });
