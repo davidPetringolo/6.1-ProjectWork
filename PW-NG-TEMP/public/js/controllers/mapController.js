@@ -65,4 +65,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
         $state.go('login');
     }
 
+    $scope.details =  function (guid) {
+        $state.go('details', {guid:guid});
+    };
 });
