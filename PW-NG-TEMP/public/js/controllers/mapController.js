@@ -29,13 +29,15 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
 
             GMaps.geolocate({
                 success: function(position) {
-                        gmap.addMarker({
-                        lat: position.coords.latitude, 
-                        lng: position.coords.longitude,
-                        icon: userPin
-                    })
                     gmap.setCenter(position.coords.latitude, position.coords.longitude);
-                },
+                    gmap.addMarker({
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                        icon: userPin,
+                        infoWindow:{
+                            content: '<p>Tu sei qui</p>'
+                        }
+                    });},
                 error: function(error) {
                     alert('Geolocation failed: '+error.message);
                 },
@@ -64,7 +66,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
     $scope.logout = function () {
         $cookies.remove('session');
         $state.go('login');
-    }
+    };
 
     $scope.details =  function (guid) {
         $state.go('details', {guid:guid});

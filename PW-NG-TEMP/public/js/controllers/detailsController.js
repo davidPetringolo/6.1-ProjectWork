@@ -33,9 +33,13 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
                 lat: detailRes.latitude,
                 lng: detailRes.longitude
             });
+
+            var storePin = 'asserts/storePositionPin.png';
+
             gmap.addMarker({
                 lat: detailRes.latitude,
                 lng: detailRes.longitude,
+                icon: storePin,
                 infoWindow:{
                     content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
                 }
