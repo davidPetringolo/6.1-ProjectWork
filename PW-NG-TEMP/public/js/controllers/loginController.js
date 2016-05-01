@@ -23,6 +23,7 @@ storeLocator.controller('loginController', function($scope, $state, $cookies, $c
             if(err){
                 error = true;
                 $scope.submithide = true;
+                $scope.loginwait = false;
             } else {
                 var currentSession = result.session;
                 if (currentSession) {

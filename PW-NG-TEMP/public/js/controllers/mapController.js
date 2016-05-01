@@ -12,6 +12,9 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
     });
     
     var gmap;
+    var userPin = 'asserts/userPositionPin.png';
+    var storePin = 'asserts/storePositionPin.png';
+
 
     storeManager.getAll(session, function(err, result){
         if(err){
@@ -20,13 +23,13 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
             list = result;
             gmap = new GMaps({
                 el: '#map',
-                lat: 45.913201, //placeholder
-                lng: 12.5070156  //placedshbujdcbsidjk
+                lat: 45.9132589, //placeholder
+                lng: 12.5066841,  //placeholder
+                icon: userPin,
+                infoWindow:{
+                    content: '<h5>Tu sei qui</h5>'
+                }
             });
-
-            var userPin = 'asserts/userPositionPin.png';
-            var storePin = 'asserts/storePositionPin.png';
-
             GMaps.geolocate({
                 success: function(position) {
                     gmap.setCenter(position.coords.latitude, position.coords.longitude);
@@ -35,9 +38,10 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                         lng: position.coords.longitude,
                         icon: userPin,
                         infoWindow:{
-                            content: '<p>Tu sei qui</p>'
+                            content: '<p><h4>JESSE SPA</h4>' + '<br/>' + 'Via Sacile, 75,Francenigo TV' + '<br/>' + '<a href =callto:"' + '+ 39 0434 766711' + '>' + '+39 0434 766711' + '</a></p>'
                         }
-                    });},
+                    })
+                },
                 error: function(error) {
                     alert('Geolocation failed: '+error.message);
                 },
@@ -55,7 +59,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     lng: result[i].longitude,
                     icon: storePin,
                     infoWindow:{
-                        content: '<p><h4><a ui-sref = details('+ result[i].guid +')>' + result[i].name + '</a></h4>' + result[i].address + '<br />' + '<a href =callto:"' + result[i].phone + '">' + result[i].phone + '</a></p>'
+                        content: '<p><h4><a ui-sref="details(result[i].guid)">' + result[i].name + '</a></h4>' + result[i].address + '<br />' + '<a href =callto:"' + result[i].phone + '">' + result[i].phone + '</a></p>'
                     }
 
                 })

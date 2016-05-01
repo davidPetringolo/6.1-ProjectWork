@@ -13,6 +13,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
     
     var guid = $stateParams.guid;
     var gmap;
+    var storePin = 'asserts/storePositionPin.png';
 
     $scope.isactive = false;
     $scope.isinactive = false;
@@ -33,15 +34,13 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
                 lat: detailRes.latitude,
                 lng: detailRes.longitude
             });
-
-            var storePin = 'asserts/storePositionPin.png';
-
             gmap.addMarker({
                 lat: detailRes.latitude,
                 lng: detailRes.longitude,
                 icon: storePin,
                 infoWindow:{
-                    content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
+                    content: '<p><h4><a ui-sref=details(detailRes.guid)>' + detailRes.name + '</a></h4>' + detailRes.address + '<br />' + '<a href =callto:"' + detailRes.phone + '">' + detailRes.phone + '</a></p>'
+                    //content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
                 }
             })
 

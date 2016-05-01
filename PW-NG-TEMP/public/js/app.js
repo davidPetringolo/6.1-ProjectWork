@@ -27,4 +27,6 @@ storeLocator.config(function($stateProvider, $urlRouterProvider) {
     ;
 });
 
-$.material.init();
+$('.carousel').carousel({
+    interval: 5000 //changes the speed
+});
