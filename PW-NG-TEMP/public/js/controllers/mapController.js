@@ -43,10 +43,15 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     })
                 },
                 error: function(error) {
-                    alert('Geolocation failed: '+error.message);
+                    //alert('Geolocation failed: '+error.message); //TOO GENERIC
+                    switch(error.message){
+                        case 'User denied Geolocation':
+                            alert("sembra che tu non abbia attivato la geolocalizzazione!\nImpara come fare ad abilitare la geolocalizzazioneul tuo browser COGLI1!");
+                            break;
+                    }
                 },
                 not_supported: function() {
-                    alert("Your browser does not support geolocation");
+                    alert("Your browser does not support geolocation.\nPlease instaall Google Chrome, Mozilla Firefox or Opera.");
                 },
                 always: function() {
                     //alert("Everything working fine...at least now.");
