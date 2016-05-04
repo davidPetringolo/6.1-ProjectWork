@@ -17,6 +17,8 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
 
     $scope.isactive = false;
     $scope.isinactive = false;
+    $scope.loading = true;
+    $scope.pannellodettaglio = false;
     
     storeDetailsManager.getByID(session, guid, function (detailErr, detailRes) {
         if (detailErr) {
@@ -24,11 +26,14 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
         } else {
             console.log(detailRes);
             $scope.storeDet = detailRes;
+            $scope.pannellodettaglio =true;
             if (detailRes.isActive == false) {
                 $scope.isinactive = true;
             } else {
                 $scope.isactive = true;
             }
+            $scope.loading = false;
+
             gmap = new GMaps({
                 el: '#map',
                 lat: detailRes.latitude,
@@ -42,7 +47,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
                     content: '<p><h4><a ui-sref=details(detailRes.guid)>' + detailRes.name + '</a></h4>' + detailRes.address + '<br />' + '<a href =callto:"' + detailRes.phone + '">' + detailRes.phone + '</a></p>'
                     //content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
                 }
-            })
+            });
 
         }
     });
@@ -51,7 +56,5 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
         $cookies.remove('session');
         $state.go('login');
     }
-
-
 
 });

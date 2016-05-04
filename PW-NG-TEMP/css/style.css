@@ -1,5 +1,7 @@
 body {
-    background-image: url("../asserts/bg.jpg");
+    background-image: url("../asserts/prova-bg-darkened.jpg");
+    background-size: auto;
+    background-repeat: repeat;
     opacity: 0.97;
 }
 .noOpacity {
@@ -19,6 +21,12 @@ a:focus, a:hover {
 }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
     color: #DAA520;
+}
+.navbar .navbar-inverse {
+    background-color: #080808;
+}
+.navbar-inverse {
+    background-color: #080808;
 }
 .box {
     opacity: 0.97;
@@ -60,12 +68,15 @@ a:focus, a:hover {
 .storespinner {
     text-align: center;
 }
+.footer {
+    background-color: #080808;
+}
 footer {
-    background-color: #101010;
+    background-color: #080808;
 }
 #map {
-    width: 100%;
-    height: 800px;
+    width: 90%;
+    height: 400px;
 }
 .info {
     font-size: x-large;
@@ -100,4 +111,21 @@ footer {
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(218, 165, 32, .075), 0 0 8px rgba(218, 165, 32, .6);
     box-shadow: inset 0 1px 1px rgba(218, 165, 32, .075), 0 0 8px rgba(218, 165, 32, .6);
+}
+.isactive {
+    color: forestgreen;
+    font-size: small;
+    border-color: forestgreen;
+}
+.isinactive {
+    color: darkred;
+    font-size: small;
+    border-color: darkred;
+}
+.sessionescaduta {
+    color: darkred;
+    font-size: small;
+}
+.nomelista {
+    cursor: pointer;
 }

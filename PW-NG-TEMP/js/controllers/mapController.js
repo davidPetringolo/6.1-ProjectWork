@@ -27,7 +27,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                 lng: 12.5066841,  //placeholder
                 icon: userPin,
                 infoWindow:{
-                    content: '<h5>Tu sei qui</h5>'
+                    content: '<p><h4>JESSE SPA</h4>' + '<br/>' + 'Via Sacile, 75,Francenigo TV' + '<br/>' + '<a href =callto:"' + '+ 39 0434 766711' + '>' + '+39 0434 766711' + '</a></p>'
                 }
             });
             GMaps.geolocate({
@@ -38,8 +38,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                         lng: position.coords.longitude,
                         icon: userPin,
                         infoWindow:{
-                            content: '<p><h4>JESSE SPA</h4>' + '<br/>' + 'Via Sacile, 75,Francenigo TV' + '<br/>' + '<a href =callto:"' + '+ 39 0434 766711' + '>' + '+39 0434 766711' + '</a></p>'
-                        }
+                            content: '<h5>Tu sei qui</h5>'                        }
                     })
                 },
                 error: function(error) {

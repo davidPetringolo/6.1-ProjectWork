@@ -2,11 +2,13 @@ storeLocator.controller('loginController', function($scope, $state, $cookies, $c
 
     $scope.loginshow = false;
     $scope.submithide = true;
+    //$scope.sessionescaduta = false;
 
     sessionController.check($cookies.getObject('session') ,function(err, result){
         if(!err){
             $state.go('list');
         } else {
+            //$scope.sessionescaduta = true;
             console.log("sessione scaduta");
             $scope.loginshow = true;
         }

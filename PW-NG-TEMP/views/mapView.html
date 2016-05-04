@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a ui-sref="list" href="">Tutti gli stores</a>
+                    <a ui-sref="list">Tutti gli stores</a>
                 </li>
                 <li>
-                    <a ui-sref="map" href="">Vicino a te</a>
+                    <a ui-sref="map">Vicino a te</a>
                 </li>
                 <li>
-                    <a ng-click="logout()" href="">Logout</a>
+                    <a ng-click="logout()">Logout</a>
                 </li>
             </ul>
         </div>
@@ -41,9 +41,9 @@
             <div class="col-lg-12 text-center">
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-offset-1 col-lg-10 mappacentrata">
 
-                        <div class="noOpacity" id="map"></div>
+                        <div class="noOpacity" id="map" style="height:400px;width:100%"></div>
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p>Copyright &copy; Your Website 2014</p>
+                <p>Copyright &copy; Maya Services</p>
             </div>
         </div>
     </div>
