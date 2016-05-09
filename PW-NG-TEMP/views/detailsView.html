@@ -90,10 +90,12 @@
                             <div class="col-lg-4">
                                 <h3>Products:</h3> <br />
                                 <div ng-repeat="p in storeDet.products">
-                                    {{p.name}}<br/>
-                                    <!--{{p.price}} <br/>
-                                    {{p.id}}-->
-                                    <hr/>
+                                    {{p.name | uppercase}}<br/>
+                                    &#8364; {{p.price}}
+                                    <p class="isactive" ng-show="{{p.isAvailable}}">DISPONIBILE</p>
+                                    <p class="isinactive" ng-show="!{{p.isAvailable}}">NON DISPONIBILE</p>
+                                    <hr class="isactive" ng-show="{{p.isAvailable}}">
+                                    <hr class="isinactive" ng-show="!{{p.isAvailable}}">
                                 </div>
                             </div>
                         </div>

@@ -63,7 +63,7 @@ storeLocator.controller('mapController', function($scope, $state, $cookies, $coo
                     lng: result[i].longitude,
                     icon: storePin,
                     infoWindow:{
-                        content: '<p><h4><a ui-sref="details(result[i].guid)">' + result[i].name + '</a></h4>' + result[i].address + '<br />' + '<a href =callto:"' + result[i].phone + '">' + result[i].phone + '</a></p>'
+                        content: '<p>' + '<a ng-click="details(' + result[i].guid + ')" target="_blank">' + '<h4>' + result[i].name + '</h4>' + '</a>' + '<a href="http://maps.google.it/?q=' + result[i].address + '" target="_blank">'+ result[i].address + '</a>'+ '<br />' + '<a href =callto:"' + result[i].phone + '">' + result[i].phone + '</a>' + '</p>'
                     }
 
                 })

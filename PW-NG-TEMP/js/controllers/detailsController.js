@@ -10,7 +10,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
             $state.go('login');
         }
     });
-    
+
     var guid = $stateParams.guid;
     var gmap;
     var storePin = 'asserts/storePositionPin.png';
@@ -19,7 +19,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
     $scope.isinactive = false;
     $scope.loading = true;
     $scope.pannellodettaglio = false;
-    
+
     storeDetailsManager.getByID(session, guid, function (detailErr, detailRes) {
         if (detailErr) {
             console.log("detail loading failure");
@@ -44,7 +44,7 @@ storeLocator.controller('detailsController', function($scope, $state, $cookies, 
                 lng: detailRes.longitude,
                 icon: storePin,
                 infoWindow:{
-                    content: '<p><h4><a ui-sref=details(detailRes.guid)>' + detailRes.name + '</a></h4>' + detailRes.address + '<br />' + '<a href =callto:"' + detailRes.phone + '">' + detailRes.phone + '</a></p>'
+                    content: '<p><h4><a ui-sref=details(detailRes.guid)>' + detailRes.name + '</a></h4>' + '<a href="http://maps.google.it/?q=' + detailRes.address + '" target="_blank">'+ detailRes.address +'</a>' + '<br />' + '<a href =callto:"' + detailRes.phone + '">' + detailRes.phone + '</a></p>'
                     //content: '<p><h4>' + detailRes.name + '</h4>' + detailRes.address + '<br>' + detailRes.phone + '</p>'
                 }
             });
